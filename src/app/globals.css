@@ -2,26 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to right, #fdfa72, #fffec8, #fffdaf, #fffec8 , #fdfa72);;
+  /* width: max-content; */
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.chef-corner-container{
+  margin: 1.5rem;
+  margin-bottom: 5rem !important;
+  .title {
+    font-family: "Georgia", serif; /* Choose a serif font for a classic look */
+    font-size: 2.5em; /* Large font size for prominence */
+    color: #333; /* Dark color for readability */
+    text-align: center; /* Center the title */
+    margin: 1.25rem 0; /* Add some margin to separate from other elements */
+    letter-spacing: 1px; /* Slight letter spacing for a refined look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+
+  }
+
+  .title:hover {
+    color: #0070f3;
+    text-shadow: 2px 2px 8px rgba(0, 112, 243, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  .title-desc{
+    font-size: 1.5em !important;
+    color: gray;
+  }
+  .recipe-list-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+
+  }
+  .recipe-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1rem
+  }
+  
+
+}
+
+
+@media (max-width: 768px) {
+  .chef-corner-container {
+    margin: 1rem;
+
+    .title {
+      font-size: 2em;
+      margin: 1rem 0;
+    }
+  
+    .title-desc {
+      font-size: 1.2em !important;
+    }
+  
+    .recipe-list {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .chef-corner-container {
+    .title {
+      font-size: 1.8em;
+    }
+
+    .recipe-list {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
   }
 }
