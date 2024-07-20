@@ -2,7 +2,7 @@ import Image from "next/image";
 import { createClient } from "contentful";
 import RecipeCard from "./components/RecipeCard";
 
-export async function getRecipes() {
+async function getRecipes() {
   const client = createClient({
     space: "lyn9u3bkiwv8",
     accessToken: "bmrTIMd7xmSiOEhK11AXelVHERdiwOpHwdkwurF3Fe8",
