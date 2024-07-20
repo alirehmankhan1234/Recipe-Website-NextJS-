@@ -19,7 +19,7 @@ export default async function Recipes() {
 
   return (
     <div className="chef-corner-container">
-      <h1 className="title">Chef's Corner</h1>
+      <h1 className="title">Chef&apos;s Corner</h1>
       <h4 className="title title-desc">Spread the Joy</h4>
       <div className="recipe-list-wrapper">
         <div className="recipe-list">

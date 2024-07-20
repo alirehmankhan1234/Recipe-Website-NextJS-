@@ -48,7 +48,7 @@ export default async function RecipeDetails({ params }: any) {
 
   return <>
     <Link href={`/`}><button className="back-to-recipes">Back to recipes</button></Link>
-    <h1 className="title">Chef's Corner</h1>
+    <h1 className="title">Chef&apos;s Corner</h1>
     <p className="title title-desc">Where every dish tells a story.</p>
 
     <div className="recipe-details">
