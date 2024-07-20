@@ -9,7 +9,7 @@ const client = createClient({
   accessToken: "bmrTIMd7xmSiOEhK11AXelVHERdiwOpHwdkwurF3Fe8",
 });
 
-export async function getRecipeById(
+async function getRecipeById(
   slug: number | string
 ): Promise<IRecipe | null> {
   try {
@@ -43,7 +43,7 @@ const getRecipeImage = (rec: IRecipe | null) => {
   }
 };
 
-export default async function RecipeDetails({ params }: any) {
+export default async function Page({ params }: any) {
   const recipeDetails: IRecipe | null = await getRecipeById(params?.slug);
 
   return <>

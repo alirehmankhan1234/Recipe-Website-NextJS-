@@ -13,7 +13,7 @@ export async function getRecipes() {
   return res.items;
 }
 
-export default async function Recipes() {
+export default async function Page() {
   const recipes: any = await getRecipes();
   console.log(recipes);
 
